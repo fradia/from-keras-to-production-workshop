@@ -5,6 +5,7 @@
 https://www.kaggle.com/moltean/fruits
 
 ## Notebooks
+
 https://github.com/codecentric/from-keras-to-production-workshop.git
 
 ## Images pullen
@@ -19,7 +20,8 @@ docker run -p 8888:8888 --mount type=bind,source=$(pwd)/notebooks,target=/keras2
 
 ## Jenkins starten
 ```bash
-docker run -p 8080:8080 -p 50000:50000 codecentric/jenkins-python-image
+docker cp <jupyter-container>:keras2production/fruits fruits
+docker run -p 8080:8080 -p 50000:50000 --mount type=bind,source=$(pwd)/fruits,target=/fruits --name jenkins_solution codecentric/jenkins-python-image
 ```
 
 ## TensorFlow Serving starten
@@ -33,3 +35,17 @@ pip install -r requirements.txt
 cd slides
 jupyter nbconvert end2end_ds.ipynb --to slides --post serve --reveal-prefix=reveal.js
 ```
+
+## References and further information
+
+### IPython and Jupyterlab
+
+https://ipython.readthedocs.io/en/stable/interactive/python-ipython-diff.html
+
+### Reinforcement Learning
+
+https://www.youtube.com/watch?v=FCyZplb0ul4
+
+### Free Notebooks from Deep Learning with Python Book
+
+https://github.com/fchollet/deep-learning-with-python-notebooks

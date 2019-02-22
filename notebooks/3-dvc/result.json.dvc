@@ -1,0 +1,11 @@
+deps:
+- md5: ce9ed028387a0e292fda14f72bafecbf
+  path: DVC_exercise.py
+- md5: 9be73f582255331b84c3de936f6cc8f8
+  path: output-exercise/test-processed.jpg
+md5: 1da67d3863db740b5656ae67422a9280
+outs:
+- cache: true
+  md5: c7d4ca78a77357d89789d675ea96d969
+  metric: false
+  path: output-exercise/result.json
